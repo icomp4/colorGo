@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
-
+	"os"
 	"github.com/gin-gonic/gin"
 	"github.com/zipqt/goScrape/controllers"
 	"github.com/zipqt/goScrape/database"
@@ -28,5 +28,7 @@ func main() {
 		}
 		c.String(200,`<img src="` + page.URL + `" alt="Random coloring page">`)
 	})
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	portStr := fmt.Sprintf("0.0.0.0:%s",port)
+	r.Run(portStr)
 }
