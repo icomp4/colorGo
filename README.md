@@ -20,7 +20,3 @@
 
     PostgreSQL: Used as the relational database management system for storing and managing data.
 
-
-## **Contact**
-
-    rewrittenzip@gmail.com
